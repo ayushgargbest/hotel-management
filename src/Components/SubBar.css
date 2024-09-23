@@ -35,7 +35,6 @@
     overflow: hidden;
 }
 
-/* Remove the hover effect to keep the color the same */
 .cart-button:hover {
     background-color: #6c757d; /* No color change on hover */
 }
