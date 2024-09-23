@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faBox } from '@fortawesome/free-solid-svg-icons';
-import './SubBar.css';
+import './Components.css';
 
 function SubNavBar() {
   const [clicked, setClicked] = useState(false);
@@ -11,7 +11,7 @@ function SubNavBar() {
     setClicked(true);
     setTimeout(() => {
       setClicked(false);
-    }, 1500); // Reset after the duration of the animation
+    }, 1500);
   };
 
   return (

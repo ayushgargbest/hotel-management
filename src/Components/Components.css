@@ -1,3 +1,7 @@
+*{
+    margin:0px;
+    padding:0px;
+}
 .button_container {
     display: flex;
     justify-content: space-between;
@@ -99,13 +103,13 @@
 }
 
 .hidden {
-    display: none; /* Use display none for hiding elements */
+    display: none;
 }
 
 @keyframes cart {
     0% { left: 10%; }
     40% { left: 30%; }
-    100% { left: 110%; } /* Moves out of the view */
+    100% { left: 110%; } 
 }
 
 @keyframes box {
@@ -119,7 +123,7 @@
     }
     100% {
         top: 50%;
-        left: 110%; /* Moves out of the view */
+        left: 110%; 
     }
 }
 
@@ -131,4 +135,44 @@
 @keyframes txt2 {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    background-color: #2B303A;        
+    padding: 10px 20px;             
+    color: white;                  
+    font-family: Arial, sans-serif; 
+}
+
+.logo {
+    font-size: 24px;                 
+    font-weight: bold;               
+}
+
+.title {
+    font-size: 20px;                
+    text-transform: uppercase;      
+    letter-spacing: 1px;            
+}
+
+.name {
+    font-size: 18px;                
+    font-weight: 400;               
+}
+
+.navbar .name::before {
+    content: '👋';                   
+    margin-right: 5px;              
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;  
+        align-items: flex-start;     
+    }
+
+    .logo, .title, .name {
+        margin-bottom: 10px;        
+    }
 }
