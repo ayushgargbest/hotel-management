@@ -1,8 +1,8 @@
-import Login from "./Screens/Login"
+import './App.css'
 function App() {
   return (
     <>
-      <Login/>
+      
     </>
   )
 }
