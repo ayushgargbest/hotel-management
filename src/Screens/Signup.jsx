@@ -24,13 +24,13 @@ function Signup() {
 
   return (
     <div>
-      <h1 className="login-heading">Sign Up</h1> {/* Corrected the heading */}
+      <h1 className="login-heading">Sign Up</h1> 
       <div className="box">
         <form>
           <label>Name:</label>
-          <input type="text" value={name} onChange={handleNameChange} /> {/* Corrected type */}
+          <input type="text" value={name} onChange={handleNameChange} />
           <label>Age:</label>
-          <input type="number" value={age} onChange={handleAgeChange} /> {/* Corrected type */}
+          <input type="number" value={age} onChange={handleAgeChange} />
           <label>Email:</label>
           <input type="email" value={email} onChange={handleEmailChange} />
           <label>Password:</label>

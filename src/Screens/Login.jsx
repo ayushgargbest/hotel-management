@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link
+import { Link } from 'react-router-dom'; 
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -23,9 +23,6 @@ function Login() {
           <label>Password</label>
           <input type="password" value={password} onChange={handlePasswordChange} />
         </form>
-        <button>
-          <Link to="/Signup">Sign Up</Link> {/* Corrected path */}
-        </button>
       </div>
     </div>
   );
