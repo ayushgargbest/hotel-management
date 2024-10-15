@@ -1,26 +1,17 @@
 import React, { useState } from "react";
-import "./Home.css"; // Link to the CSS file
+import "./Home.css"; 
 
 const Home = () => {
-  // Slider state for both accommodation and things-to-do
   const [accommodationIndex, setAccommodationIndex] = useState(0);
   const [thingsToDoIndex, setThingsToDoIndex] = useState(0);
-
-  // Accommodation slides
   const accommodationSlides = [
     { src: "/accomodation_photos/acc01.png", title: "Ocean View Room", price: "$250/night" },
     { src: "/accomodation_photos/acc02.png", title: "Garden Suite", price: "$300/night" },
-    // Add other accommodation slides here
   ];
-
-  // Things to do slides
   const thingsToDoSlides = [
     { src: "/attraction_photos/att01.png", title: "Sunset Beach", time: "5 minutes away" },
     { src: "/attraction_photos/att02.png", title: "National Park", time: "15 minutes away" },
-    // Add other things to do slides here
   ];
-
-  // Functions to change slides for both carousels
   const handlePrevSlide = (setIndex, currentIndex, totalSlides) => {
     setIndex((prevIndex) => (prevIndex === 0 ? totalSlides - 1 : prevIndex - 1));
   };
@@ -31,7 +22,6 @@ const Home = () => {
 
   return (
     <div>
-      {/* Navbar */}
       <nav>
         <div className="hotel-name">
           <h1>Ocean Breeze Hotel</h1>

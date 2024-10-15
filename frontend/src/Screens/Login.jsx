@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Login.css';
-import { Link } from 'react-router-dom'; 
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isClient, setIsClient] = useState(true); 
 
   function handleEmailChange(event) {
     setEmail(event.target.value);
@@ -15,29 +16,58 @@ function Login() {
   }
 
   function handleSubmit(event) {
-    event.preventDefault(); // Prevents default form submission behavior (page reload)
-    console.log("Email:", email, "Password:", password); // Handle the form data here
+    event.preventDefault();
+    console.log("Email:", email, "Password:", password);
   }
 
   return (
-    <div>
+    <div className="login-container">
+      <img
+        src="/login-image.jpg"
+        alt="Login Background"
+        className="background-image"
+      />
       <h1 className="login-heading">Login</h1>
+      <div className="role-buttons">
+        <button 
+          className={`role-button ${isClient ? 'active' : ''}`} 
+          onClick={() => setIsClient(true)}
+        >
+          Client Login
+        </button>
+        <button 
+          className={`role-button ${!isClient ? 'active' : ''}`} 
+          onClick={() => setIsClient(false)}
+        >
+          Staff Login
+        </button>
+      </div>
       <div className="box">
         <form onSubmit={handleSubmit}>
           <label>Email:</label>
-          <input 
-            type="email" 
-            value={email} 
-            onChange={handleEmailChange} 
+          <input
+            type="email"
+            value={email}
+            onChange={handleEmailChange}
           />
           <label>Password:</label>
-          <input 
-            type="password" 
-            value={password} 
-            onChange={handlePasswordChange} 
+          <input
+            type="password"
+            value={password}
+            onChange={handlePasswordChange}
           />
           <button type="submit">Enter</button>
         </form>
+
+        {isClient && (
+          <p>
+            Don't have an account? 
+            <Link to="/signup"> Sign Up</Link>
+          </p>
+        )}
+      </div>
+      <div className={`login-info ${isClient ? 'client-info' : 'staff-info'}`}>
+        <h2>{isClient ? "Client Login" : "Staff Login"}</h2>
       </div>
     </div>
   );

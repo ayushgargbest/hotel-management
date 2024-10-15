@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Signup.css'; 
 
 function Signup() {
   const [name, setName] = useState("");
@@ -22,11 +23,21 @@ function Signup() {
     setPassword(event.target.value);
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log("Name:", name, "Age:", age, "Email:", email, "Password:", password);
+  }
+
   return (
-    <div>
-      <h1 className="login-heading">Sign Up</h1> 
+    <div className="login-container">
+      <img 
+        src="/login-image.jpg" 
+        alt="Signup Background" 
+        className="background-image" 
+      />
+      <h1 className="login-heading">Sign Up</h1>
       <div className="box">
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>Name:</label>
           <input type="text" value={name} onChange={handleNameChange} />
           <label>Age:</label>
@@ -35,6 +46,7 @@ function Signup() {
           <input type="email" value={email} onChange={handleEmailChange} />
           <label>Password:</label>
           <input type="password" value={password} onChange={handlePasswordChange} />
+          <button type="submit">Enter</button>
         </form>
       </div>
     </div>
