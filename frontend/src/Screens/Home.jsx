@@ -1,9 +1,14 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import "./Home.css";
+=======
+import "./Home.css"; 
+>>>>>>> 44a9f8c5b64201343ece82fa3644460e07ede4e5
 
 const Home = () => {
   const [accommodationIndex, setAccommodationIndex] = useState(0);
   const [thingsToDoIndex, setThingsToDoIndex] = useState(0);
+<<<<<<< HEAD
   const [specialsIndex, setSpecialsIndex] = useState(0);
 
   // Accommodation slides
@@ -18,12 +23,16 @@ const Home = () => {
     { src: "/accomodation_photos/acc08.png", title: "Beach View Room", price: "Starting at $280/night" },
     { src: "/accomodation_photos/acc09.png", title: "Standard Room", price: "Starting at $180/night" },
     { src: "/accomodation_photos/acc10.png", title: "Executive Suite", price: "Starting at $450/night" },
+=======
+  const accommodationSlides = [
+    { src: "/accomodation_photos/acc01.png", title: "Ocean View Room", price: "$250/night" },
+    { src: "/accomodation_photos/acc02.png", title: "Garden Suite", price: "$300/night" },
+>>>>>>> 44a9f8c5b64201343ece82fa3644460e07ede4e5
   ];
-
-  // Things to do slides
   const thingsToDoSlides = [
     { src: "/attraction_photos/att01.png", title: "Sunset Beach", time: "5 minutes away" },
     { src: "/attraction_photos/att02.png", title: "National Park", time: "15 minutes away" },
+<<<<<<< HEAD
     { src: "/attraction_photos/att03.png", title: "Ocean Aquarium", time: "20 minutes away" },
     { src: "/attraction_photos/att04.png", title: "Historic Lighthouse", time: "10 minutes away" },
   ];
@@ -37,6 +46,9 @@ const Home = () => {
   ];
 
   // Handle slider changes
+=======
+  ];
+>>>>>>> 44a9f8c5b64201343ece82fa3644460e07ede4e5
   const handlePrevSlide = (setIndex, currentIndex, totalSlides) => {
     setIndex((prevIndex) => (prevIndex === 0 ? totalSlides - 1 : prevIndex - 1));
   };
@@ -47,7 +59,6 @@ const Home = () => {
 
   return (
     <div>
-      {/* Navbar */}
       <nav>
         <div className="hotel-name">
           <h1>Ocean Breeze Hotel</h1>
