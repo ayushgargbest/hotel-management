@@ -12,13 +12,7 @@ html, body {
 .login-container {
     position: relative;
     width: 100%;
-<<<<<<< HEAD
-    background-image: url('/login-image/login-image.jpg'); /* Replace with your image URL */
-    background-size: cover;
-    background-position: center;
-=======
     height: 100vh;
->>>>>>> 44a9f8c5b64201343ece82fa3644460e07ede4e5
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,7 +89,7 @@ p {
 }
 
 p a {
-    color: #0570fc;
+    color: #013881;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -113,7 +107,7 @@ p a:hover {
 
 .role-button {
     padding: 10px 20px;
-    background-color: #2a09e6;
+    background-color: #0570fc;
     color: white;
     border: none;
     border-radius: 5px;
@@ -125,12 +119,12 @@ p a:hover {
 }
 
 .role-button:hover {
-    background-color: #2a09e6;
+    background-color: #03469e;
 }
 
 .role-button.active {
-    background-color: #2209ad;
+    background-color: #023f8f;
 }
-.login-info{
+.login-info {
     color: white;
 }

@@ -1,54 +1,17 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
-import "./Home.css";
-=======
 import "./Home.css"; 
->>>>>>> 44a9f8c5b64201343ece82fa3644460e07ede4e5
 
 const Home = () => {
   const [accommodationIndex, setAccommodationIndex] = useState(0);
   const [thingsToDoIndex, setThingsToDoIndex] = useState(0);
-<<<<<<< HEAD
-  const [specialsIndex, setSpecialsIndex] = useState(0);
-
-  // Accommodation slides
-  const accommodationSlides = [
-    { src: "/accomodation_photos/acc01.png", title: "Ocean View Room", price: "Starting at $250/night" },
-    { src: "/accomodation_photos/acc02.png", title: "Garden Suite", price: "Starting at $300/night" },
-    { src: "/accomodation_photos/acc03.png", title: "Deluxe Ocean Suite", price: "Starting at $400/night" },
-    { src: "/accomodation_photos/acc04.png", title: "Family Suite", price: "Starting at $350/night" },
-    { src: "/accomodation_photos/acc05.png", title: "Luxury Penthouse", price: "Starting at $500/night" },
-    { src: "/accomodation_photos/acc06.png", title: "Oceanfront Bungalow", price: "Starting at $600/night" },
-    { src: "/accomodation_photos/acc07.png", title: "Cozy Cottage", price: "Starting at $220/night" },
-    { src: "/accomodation_photos/acc08.png", title: "Beach View Room", price: "Starting at $280/night" },
-    { src: "/accomodation_photos/acc09.png", title: "Standard Room", price: "Starting at $180/night" },
-    { src: "/accomodation_photos/acc10.png", title: "Executive Suite", price: "Starting at $450/night" },
-=======
   const accommodationSlides = [
     { src: "/accomodation_photos/acc01.png", title: "Ocean View Room", price: "$250/night" },
     { src: "/accomodation_photos/acc02.png", title: "Garden Suite", price: "$300/night" },
->>>>>>> 44a9f8c5b64201343ece82fa3644460e07ede4e5
   ];
   const thingsToDoSlides = [
     { src: "/attraction_photos/att01.png", title: "Sunset Beach", time: "5 minutes away" },
     { src: "/attraction_photos/att02.png", title: "National Park", time: "15 minutes away" },
-<<<<<<< HEAD
-    { src: "/attraction_photos/att03.png", title: "Ocean Aquarium", time: "20 minutes away" },
-    { src: "/attraction_photos/att04.png", title: "Historic Lighthouse", time: "10 minutes away" },
   ];
-
-  // Specials slides
-  const specialsSlides = [
-    { src: "/special_images/spe01.png", title: "Romantic Getaway", offer: "Book now and get 20% off" },
-    { src: "/special_images/spe02.png", title: "Family Package", offer: "Enjoy fun activities for the whole family" },
-    { src: "/special_images/spe03.png", title: "Spa Retreat", offer: "Relax and rejuvenate with our spa services" },
-    { src: "/special_images/spe04.png", title: "Weekend Getaway", offer: "Special rates for weekend stays" },
-  ];
-
-  // Handle slider changes
-=======
-  ];
->>>>>>> 44a9f8c5b64201343ece82fa3644460e07ede4e5
   const handlePrevSlide = (setIndex, currentIndex, totalSlides) => {
     setIndex((prevIndex) => (prevIndex === 0 ? totalSlides - 1 : prevIndex - 1));
   };
